@@ -1,3 +1,3 @@
-# Astronomical Association of Southwest Petroleum University
+# Astronomical Association of Southwest Petroleum
 简称AASPU
-辰空天文社官方网址
+辰空天文社网址
