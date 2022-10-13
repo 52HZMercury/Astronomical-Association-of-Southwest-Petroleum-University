@@ -1,367 +1,1127 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简介</title>
-    <link rel="stylesheet" href="css/sea.css">
-    <link rel="stylesheet" href="css/lake.css">
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/nav.css">
-    <link rel="stylesheet" href="css/animate.min.css">
 
-    <link rel="stylesheet" href="css/birds.css">
-    <script src="js/swiper-bundle.min.js"></script>
+<html lang="zh-CN">
+  
 
-    <script src="js/switchMode.js" data-type="attach"></script>
+    <head>
+      <meta charset="utf-8" />
+       
+      <meta name="keywords" content="Hexo,Hexo主题,ayer,代码,博客,旅行" />
+       
+      <meta name="description" content="Hexo主题Ayer中文说明" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title> 岛</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
 
-    <script src="js/lake.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/home.js" data-type="attach"></script>
-    <script src="js/common.js" data-type="attach"></script>
-    <script src="js/jquery-3.3.1.js"></script>
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="岛" type="application/atom+xml">
 </head>
-
-<body class="pageLoading">
-
-    <h1 class='head-logo'>
-        <a href='./index.html'>
-            <span></span>
-        </a>
-    </h1>
-
-<!--    <nav class='gnav'>-->
-<!--        <div class='gnav-wrap'>-->
-<!--            <div class='gnav-container'>-->
-<!--                <ul class='gnav-main'>-->
-<!--                    <li class='gnav-main__item'>-->
-<!--                        <a href='Monomer.html' class='gnav-anc'>-->
-<!--                            <img class='gnav-main__title' src='images/common/title/sea_letter.png' id='ocean' alt='海'>-->
-<!--                            <span class='gnav-main__description'>东指羲和能走马 海尘新生石山下</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class='gnav-main__item'>-->
-<!--                        <a href='lake.html' class='gnav-anc'>-->
-<!--                            <img class='gnav-main__title' src='images/common/title/lake_letter.png' id='lake' alt='湖'>-->
-<!--                            <span class='gnav-main__description'>沙漠回看清禁月 湖山应梦武林春</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-
-<!--                    <li class='gnav-main__item'>-->
-<!--                        <a href='river.html' class='gnav-anc'>-->
-<!--                            <img class='gnav-main__title' src='images/common/title/river_letter.png' id='river' alt='川'>-->
-<!--                            <span class='gnav-main__description'>百川东到海 何时复西归</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-
-<!--                    <li class='gnav-main__item'>-->
-<!--                        <a href='mountain.html' class='gnav-anc'>-->
-<!--                            <img class='gnav-main__title' src='images/common/title/mountain_letter.png' id='mountain'-->
-<!--                                alt='山'>-->
-<!--                            <span class='gnav-main__description'>会当凌绝顶 一览众山小</span>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-<!--            <div class='gnav-news'>-->
-<!--                <ul class='gnav-news-list'>-->
-<!--                    <li class='gnav-news-list__item'>-->
-<!--                        <a href='Monomer.html' class='anc-hover anc-hover_visible'>-->
-<!--                            <figure class='gnav-news-list__image'>-->
-<!--                                <img src='images/home/sea.jpg' alt='海'>-->
-<!--                            </figure>-->
-<!--                            <h2 class='gnav-news__title'>海阔凭鱼跃，天高任鸟飞。</h2>-->
-<!--                        </a>-->
-<!--                    </li>-->
-
-<!--                    <li class='gnav-news-list__item'>-->
-<!--                        <a href='river.html' class='anc-hover anc-hover_visible'>-->
-<!--                            <figure class='gnav-news-list__image'>-->
-<!--                                <img src='images/common/mountain_hua_01.jpg ' alt='川'>-->
-<!--                            </figure>-->
-<!--                            <h2 class='gnav-news__title'>川从陕路去，河绕华阴流。</h2>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class='gnav-news-list__item'>-->
-<!--                        <a href='lake.html' class='anc-hover anc-hover_visible'>-->
-<!--                            <figure class='gnav-news-list__image'>-->
-<!--                                <img src='images/home/lake.JPG' alt='湖'>-->
-<!--                            </figure>-->
-<!--                            <h2 class='gnav-news__title'>八月白露降，湖中水方老。</h2>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li class='gnav-news-list__item'>-->
-<!--                        <a href='mountain.html' class='anc-hover anc-hover_visible'>-->
-<!--                            <figure class='gnav-news-list__image'>-->
-<!--                                <img src='images/home/mountain.jpg' alt='山'>-->
-<!--                            </figure>-->
-<!--                            <h2 class='gnav-news__title'>暮从碧山下，山月随人归。</h2>-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
-
-<!--        </div>-->
-
-<!--    </nav>-->
-<!--    <header class='header'>-->
-<!--        <div class='header-wrap'>-->
-<!--            <div id="switch">-->
-<!--                <img src='./images/common/moon.svg' id='moon' alt='themeIcon' class='themeIcon'>-->
-<!--            </div>-->
-<!--            <div class='header-reserve translate-btn'>-->
-<!--                <a href='#' class='jp'>回到顶部</a>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </header>-->
-
-    <h1 class='head-logo'>
-        <a href='./index.html'>
-            <span>川西民居</span>
-        </a>
-    </h1>
+  </html>
+</html>
 
 
-    <div class='translate-btn'>
-        <a href='./Monomer_en.html' >En</a>
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      
+<section class="cover">
+    
+      
+      <a class="forkMe" href="https://github.com/Shen-Yu/hexo-theme-ayer"
+        target="_blank"><img width="149" height="149" src="/images/forkme.png"
+          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
+    
+  <div class="cover-frame">
+    <div class="bg-box">
+      <img src="/images/cover1.jpg" alt="image frame" />
     </div>
-
-    <main id="state" class="main">
-
-        <div class="page_head">
-
-            <div class="bird-container bird-container--one">
-                <div class="bird bird--one"></div>
-            </div>
-
-            <div class="bird-container bird-container--two">
-                <div class="bird bird--two"></div>
-            </div>
-
-            <div class="bird-container bird-container--three">
-                <div class="bird bird--three"></div>
-            </div>
-
-            <div class="bird-container bird-container--four">
-                <div class="bird bird--four"></div>
-            </div>
-            <div class="page_head_title"><span>简介</span></div>
-
-        </div>
-
-
-        <!-- contents -->
-        <div class="contents">
-
-
-            <!--轮播图-->
-            <ul class="lake_img">
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer01.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer02.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer03.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer04.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer01.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer02.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer03.jpg" alt="">
-                    </picture>
-                </li>
-                <li class="lake_img_item">
-                    <picture>
-                        <img src="./images/lake/lake_swiper/monomer04.jpg" alt="">
-                    </picture>
-                </li>
-            </ul>
-
-            <section class="sea_sec">
-                <div class="sea_text">
-                    <p>
-                        <span class="first_word">简介</span>
-                        <br>
-                    </p>
-                    <p>
-                        <span>川西民居诞生于川西平原，多以木结构为主，用材因地制宜、因材设计，讲究“天人合一”自然观与环境观。经历了漫长的发展历程，川西传统木结构民居自成一家，成为相对独特的民居建筑样式，是中国民居中的瑰宝。</span>
-                        <br>
-                    </p>
-                </div>
-                <ul class="image_multi">
-<!--                    <li><img src="./images/sea/strcture4.jpg" alt=""></li>-->
-<!--                    <li><img src="./images/sea/strcture1.jpg" alt=""></li>-->
-<!--                    <li><img src="./images/sea/strcture2.jpg" alt=""></li>-->
-<!--                    <li><img src="./images/sea/strcture3.jpg" alt=""></li>-->
-                </ul>
-            </section>
-
-<!--            <section class="sea_sec">-->
-<!--                <div class="sea_text">-->
-<!--                    <p>-->
-<!--                        <span class="first_word">天井</span>-->
-<!--                        <br>-->
-<!--                    </p>-->
-<!--                    <p>-->
-<!--                        <span>天井是指宅院中房与房之间或房与围墙之间所围成的露天空地。即四面有房屋、三面有房屋另一面有围墙或两面有房屋另两面有围墙时中间的空地。</span>-->
-<!--                        <br>-->
-<!--                        <span>“天井”普遍存在于明清至今的中国传统民居中，同时街道场镇店居里也可见天井，小的仅有一尺间宽。</span>-->
-<!--                        <br>-->
-<!--                        <span>天井一般有三个主要用途：改善采光，加强通风，组织排水。</span>-->
-<!--                        <br> <span>川西地区空气潮湿、温差较小，且宅深屋多，天井借助风压差将屋内的潮气与灰尘排于屋外；</span>-->
-<!--                    </p>-->
-<!--                    <p>-->
-<!--                        <span>还建有抽风天井或抽风口，以利于形成良好的穿堂风。</span>-->
-<!--                        <br>-->
-<!--                        <span>天井内的房檐设置成向内斜坡状，雨水顺着房檐流入天井再可聚集排出院外，寓意水聚天心，称“四水归堂”。</span>-->
-<!--                        <br>-->
-<!--                        <span>在传统的中国风水观中，水意味着“财气”，水聚天心，意味着“财不外流”。</span>-->
-<!--                        <br>-->
-<!--                    </p>-->
-
-<!--                </div>-->
-<!--            </section>-->
-
-<!--            <section class="sea_sec">-->
-
-<!--                <ul class="image_single">-->
-<!--                    <li class="image_multi_wide"><img src="./images/sea/building8.webp" alt=""></li>-->
-<!--                </ul>-->
-
-<!--            </section>-->
-
-<!--            <section class="sea_sec">-->
-<!--                <div class="sea_text">-->
-<!--                    <p>-->
-<!--                        <span class="first_word">结论</span>-->
-<!--                        <br>-->
-<!--                    </p>-->
-<!--                    <p>-->
-<!--                        <span>“青瓦出檐长，穿斗白粉墙，宅前敞院坝，四周立檐廊”，独特的穿斗木结构、冷滩瓦工艺、大出檐构造、天井院坝设计钧鲜明地展现了川西人民的创新意识与实践精神。结合当地自然条件，充分利用土地资源，川西坝子的传统民居力求建设“天人合一”的宜居空间。川西民居蕴含着多彩文化，在城市现代化的快速发展的今天，我们应该竭尽全力，保护与传承这一地方建筑文化。</span>-->
-<!--                        <br>-->
-<!--                    </p>-->
-<!--                </div>-->
-<!--            </section>-->
-
-        </div>
-        <!-- introduction -->
-        <div class="introduction">
-            <div class="introduction_img"><img
-                    src="./images/temp/vintage-fairytale-houses-in-austrian-mountains-picjumbo-com.jpg" alt="">
-            </div>
-        </div>
-
-    </main>
-
-    <!-- footer -->
-    <footer id="global-footer">
-        <div class="container">
-            <p class="footer-text">川西木结构民居文化<br> Culture Connotation of the Traditional Western Sichuan Dwellings</p>
-            <img class="footer_img" src="./images/common/footer_icon.png" alt="footer_icon">
-        </div>
-    </footer>
-
-    <div id="loader">
-        <div id="loadBar" class="animated slideInLeft"></div>
+    <div class="cover-inner text-center text-white">
+      <h1><a href="/">岛</a></h1>
+      <div id="subtitle-box">
+        
+        <span id="subtitle"></span>
+        
+      </div>
+      <div>
+        
+      </div>
     </div>
+  </div>
+  <div class="cover-learn-more">
+    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
+  </div>
+</section>
 
-    <div class="scrollIndicator"></div>
-    <script>
-        // var theme = "light"
-        // //主页、目录的深色/浅色主题变化
-        // function switchMode() {
-        //     var element = document.body
-        //     element.classList.toggle("darktype")
-        //     //山页面图片
-        //     var icon = document.getElementById('moon')
-        //     var head_logo = document.getElementById('head_logo')
-        //     var page_letter = document.getElementById('sea_letter')
-        //     //目录页图片
-        //     var ocean = document.getElementById("ocean")
-        //     var lake = document.getElementById("lake")
-        //     var river = document.getElementById("river")
-        //     var mountain = document.getElementById("mountain")
-        //     console.log(icon)
-        //     console.log(theme)
-        //     if (theme == "dark") {
-        //         //主页部分图片变化为浅色主题状态
-        //         icon.src = "./images/common/moon.svg"
-        //         head_logo.src = "./images/home/head_logo.png"
-        //         page_letter.src = "./images/common/title/sea_letter.png"
-        //         //目录页部分图片变化为浅色主题状态
-        //         ocean.src = "./images/common/title/sea_letter.png"
-        //         lake.src = "./images/common/title/lake_letter.png"
-        //         river.src = "./images/common/title/river_letter.png"
-        //         mountain.src = "./images/common/title/mountain_letter.png"
-        //         theme = "light"
-        //     } else {
-        //         //主页部分图片变化为深色主题状态
-        //         icon.src = "./images/common/sun.svg"
-        //         head_logo.src = "./images/home/head_logo_dark.png"
-        //         page_letter.src = "./images/common/title/sea_letter_dark.png"
-        //         //目录页部分图片变化为浅色主题状态
-        //         ocean.src = "./images/common/title/sea_letter_dark.png"
-        //         lake.src = "./images/common/title/lake_letter_dark.png"
-        //         river.src = "./images/common/title/river_letter_dark.png"
-        //         mountain.src = "./images/common/title/mountain_letter_dark.png"
-        //         theme = "dark"
-        //     }
-        // }
 
-        //Scroll事件，对每一个image_single的img添加fadeInUp动画
-        $(function () {
-            this.handleScroll = function () {
-                let currentScroll = window.pageYOffset + window.innerHeight;
-                // console.log(currentScroll);
-                //$(".imgae_single img")是一个对象数组
-                let el = $(".image_single img");
-                // console.log(el);
-                for (let i = 0; i < el.length; i++) {
-                    if (el[i].offsetTop < currentScroll) {
-                        $(el[i]).addClass('animated fadeInUp');
-                        // console.log('success!');
-                    } else {
-                        $(el[i]).removeClass('fadeInUp');
-                    }
-                }
-            }
-            window.addEventListener('scroll', this.handleScroll, true);
+
+<script src="https://cdn.staticfile.org/typed.js/2.0.12/typed.min.js"></script>
+
+
+<!-- Subtitle -->
+
+  <script>
+    try {
+      var typed = new Typed("#subtitle", {
+        strings: ['面朝大海，春暖花开', '愿你一生努力，一生被爱', '想要的都拥有，得不到的都释怀'],
+        startDelay: 0,
+        typeSpeed: 200,
+        loop: true,
+        backSpeed: 100,
+        showCursor: true
+      });
+    } catch (err) {
+      console.log(err)
+    }
+  </script>
+  
+<div id="main">
+  <section class="outer">
+  
+  <ul class="ads">
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://curl.qcloud.com/kvO7hb43">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5ccc.jpg" width="300" alt="云服务器限时秒杀">
+            </a>
+        </li>
+    
+        <li>
+            <a target="_blank" rel="noopener" href="https://www.vultr.com/?ref=8630075">
+                <img src="https://pic.imgdb.cn/item/62174b452ab3f51d912a5cd7.png" width="300" alt="vultr优惠vps">
+            </a>
+        </li>
+    
+</ul>
+  
+  
+  
+
+<div class="notice" style="margin-top:50px">
+    <i class="ri-heart-fill"></i>
+    <div class="notice-content" id="broad"></div>
+</div>
+<script type="text/javascript">
+    fetch('https://v1.hitokoto.cn')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("broad").innerHTML = data.hitokoto;
         })
+        .catch(console.error)
+</script>
 
-        //高亮事件
-        $(function () {
-            //鼠标进入的时候,其他的li标签透明度：0.5
-            $(".image_multi li").hover(function () {
-                $(this).siblings().stop().fadeTo(400, 0.5);
-            }, function () {
-                // 鼠标离开，其他li 透明度改为 1
-                $(this).siblings().stop().fadeTo(400, 1);
-            })
-        });
-    </script>
+<style>
+    .notice {
+        padding: 20px;
+        border: 1px dashed #e6e6e6;
+        color: #969696;
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        background: #fbfbfb50;
+        border-radius: 10px;
+    }
+
+    .notice i {
+        float: left;
+        color: #999;
+        font-size: 16px;
+        padding-right: 10px;
+        vertical-align: middle;
+        margin-top: -2px;
+    }
+
+    .notice-content {
+        display: initial;
+        vertical-align: middle;
+    }
+</style>
+  
+  <article class="articles">
+    
+    
+    
+    
+    <article
+  id="post-Ayer中文说明"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/ayer/"
+    >Ayer中文说明
+  <i class="article-topping">置顶</i>
+</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/ayer/" class="article-date">
+  <time datetime="2019-12-03T05:26:02.000Z" itemprop="datePublished">2019-12-03</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a> 是一个干净且优雅的 Hexo 主题，自带响应式，加载速度很快，该有的功能都有，可配置项很多，非常适合作为你的博客主题，主题内还附送了 6 张精美的高清壁纸。欢迎使用和 Star 支持，如果你在使用过程中有任何疑问或者建议，欢迎联系我！如果你的博客采用了本主题，欢迎在下面评论区留下地址~</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-theme-ayer">Ayer</a> 在马来语中是“水”的意思，在西班牙语中是“昨天”的意思。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/picgo/ayer.jpg" alt="hexo-theme-ayer"></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Shen-Yu/hexo-theme-ayer">GitHub 地址</a></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/shen-yu/hexo-theme-ayer">国内镜像</a></p>
+<p><a href="https://shen-yu.gitee.io/">效果预览</a></p>
+<p><a href="https://shen-yu.gitee.io/2019/ayer/">中文说明</a></p> 
+      <a class="article-more-link" href="/2019/ayer/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-chart"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/chartjs/"
+    >在 Hexo 中插入 Chart 动态图表
+  <i class="article-topping">置顶</i>
+</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/chartjs/" class="article-date">
+  <time datetime="2020-08-06T14:58:13.000Z" itemprop="datePublished">2020-08-06</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p><code>Chartjs</code>是一款简单优雅的数据可视化工具，对比其他图表库如echarts、highcharts、c3、flot、amchart等，它的画面效果、动态效果都更精致，它的 <a target="_blank" rel="noopener" href="https://chartjs.bootcss.com/">文档首页</a> 就透出一股小清新，基于 HTML5 Canvas，它拥有更好的性能且响应式，基本满足了一般数据展示的需要，包括折线图，条形图，饼图，散点图，雷达图，极地图，甜甜圈图等。</p> 
+      <a class="article-more-link" href="/2020/chartjs/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-mysql"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/mysql/"
+    >mysql踩坑记录</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/mysql/" class="article-date">
+  <time datetime="2020-08-26T14:02:10.000Z" itemprop="datePublished">2020-08-26</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>事情起因是这样的，我最近想着写个用python爬取某网站音频并写入数据库的脚本，由于之前操作数据库都是在线上直接改，没有本地连过，所以本地的pymysql想连我网站的数据库，第一步是要把user表的localhost改成%，以此开放远程连接，问题就来了，我在phpmyadmin改完之后，居然所有账号都登不上了，也不知道哪出了问题，可能是我敲错了吧。然后我又找了一篇新建root用户的博文，跟着敲，敲完之后确实能登上去了。但是！这时候只能看到information_schema这一个数据库了，这时候网站也挂了，我以为数据库被误删了，就找各种方法想还原数据库。折腾半天，我终于解决了，我觉得有必要记录一下踩坑过程。</p> 
+      <a class="article-more-link" href="/2020/mysql/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-网站搬家记录"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/wangzhanbanjia/"
+    >网站搬家记录</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/wangzhanbanjia/" class="article-date">
+  <time datetime="2020-07-16T12:45:28.000Z" itemprop="datePublished">2020-07-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>记录第一次用宝塔面板搬迁wordpress网站，附性能优化+防黑。</p>
+</blockquote>
+<p>最近把网站从虚拟主机搬迁到了vps，由于是第一次搬网站，又不太懂运维和服务器知识，期间踩了不少坑，在此记录一下，也希望对遇到同样问题的朋友有所帮助。首先，如果你的流量比较大，为了不影响用户最好选准时间段，我的网站早晨是一个流量低谷，所以我是定好闹钟6点起床开搞的，记得在完成搬迁之前，原有服务器上的网站先别急着删掉，这样可以随时通过域名解析就能恢复。</p> 
+      <a class="article-more-link" href="/2020/wangzhanbanjia/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%94%9F%E6%B4%BB/" rel="tag">生活</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-Hexo-SEO优化"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/hexo-seo/"
+    >hexo-seo优化技巧</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2020/hexo-seo/" class="article-date">
+  <time datetime="2020-06-16T14:32:38.000Z" itemprop="datePublished">2020-06-16</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>搭建的hexo博客如果不经过优化，在搜索引擎被收录的可能很小，SEO可以提高被搜到的几率</p>
+<p><a name="04ad26dd"></a></p>
+<h3 id="一-生成-sitemap-文件"><a href="#一-生成-sitemap-文件" class="headerlink" title="一. 生成 sitemap 文件"></a>一. 生成 sitemap 文件</h3><p>需要先安装两个 hexo 插件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save		</span><br><span class="line">npm install hexo-generator-baidu-sitemap --save</span><br></pre></td></tr></table></figure>
+
+<p>打开配置文件<code>_config.yml</code>添加</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">sitemap:</span></span><br><span class="line">	<span class="attr">path:</span> <span class="string">sitemap.xml</span></span><br><span class="line"><span class="attr">baidusitemap:</span></span><br><span class="line">	<span class="attr">path:</span> <span class="string">baidusitemap.xml</span></span><br></pre></td></tr></table></figure>
+
+<p>再重启 hexo，在本地访问 <a href="">localhost:4000/sitemap.xml</a>和 <a href="">localhost:4000/baidusitemap.xml</a> 就能正确的展示出两个sitemap 文件了。</p> 
+      <a class="article-more-link" href="/2020/hexo-seo/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-about"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2019/about/"
+    >About Me</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2019/about/" class="article-date">
+  <time datetime="2019-12-01T13:37:04.000Z" itemprop="datePublished">2019-12-01</time>
+</a>  
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <blockquote>
+<p>A developer, live in Hangzhou, China.</p>
+</blockquote>
+<p>姓名：沈宇<br>现居：杭州<br>GitHub: <a target="_blank" rel="noopener" href="https://github.com/Shen-Yu">Shen-Yu</a><br>twitter: <a target="_blank" rel="noopener" href="https://twitter.com/shenyu1995">shenyu1995</a><br>QQ: <a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&uin=448766534&site=qq&menu=yes">448766534</a><br>微信: shenyu_vip</p> 
+      <a class="article-more-link" href="/2019/about/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-静享云南慢时光"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/yunnan/"
+    >静享云南慢时光</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/yunnan/" class="article-date">
+  <time datetime="2018-11-20T16:17:37.000Z" itemprop="datePublished">2018-11-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a> / <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/%E5%9B%BD%E5%86%85/">国内</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>当我坐着飞机掠过玉龙雪山，当我拿着杯子舀起泸沽湖水，当我沐浴阳光闻着洱海气息，当我立于海埂大坝望着海鸥随风翱翔，当我骑着自行车与彝族寨子擦肩而过……当我真正踏入这片土地，我发现它不仅仅是适合文艺小资青年，更适合热爱山水，热爱自由的背包客。</p> 
+      <a class="article-more-link" href="/2018/yunnan/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BD%E5%86%85/" rel="tag">国内</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-原汁原味黔东南"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/qiandongnan/"
+    >原汁原味黔东南</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/qiandongnan/" class="article-date">
+  <time datetime="2018-11-20T16:15:20.000Z" itemprop="datePublished">2018-11-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a> / <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/%E5%9B%BD%E5%86%85/">国内</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>从昆明向东过来，我预选的目的地有两个，都匀和凯里。到都匀的话去荔波比较方便，到凯里的话去看黔东南苗寨比较方便。考虑到荔波在南边，而且交通不是很方便（目前正在建凯里到荔波的大路，建成后大巴过去还是挺方便的），如果从都匀过去的话也会浪费几天时间，所以就留下了这一程最遗憾的一点，就是没能去荔波看看喀斯特地貌（其实来之前我对荔波已经做足了攻略）。好在这一点遗憾马上就被朗德和镇远给弥补了。</p> 
+      <a class="article-more-link" href="/2018/qiandongnan/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BD%E5%86%85/" rel="tag">国内</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-大美湘西"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2018/xiangxi/"
+    >大美湘西</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2018/xiangxi/" class="article-date">
+  <time datetime="2018-11-20T16:13:57.000Z" itemprop="datePublished">2018-11-21</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a> / <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/%E5%9B%BD%E5%86%85/">国内</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>为什么先写这篇？因为湘西是我云贵湘之行的最后一站，刚出怀化火车站，我对它的印象是很差的，首先是有很多莫名其妙的人会把你围得透不过气，各种请你住宿吃饭打车，甚至我在怀化汽车站上厕所还向我收费（我当然没有给）。之后我去了凤凰古镇，到的时候正好是晚上，周遭一片漆黑，只有中心地带比较热闹，古镇里还有小女孩强行推销鲜花，和苗族姑娘拍照也得收费。这是湘西给我的第一印象。就是商业化太严重了，我想，也或许是当地经济比较差的缘故吧。。这和政府在城市整治这方面有脱不开的关系。不过抛开这些不谈，整个湘西的风景还是值得一去的。</p> 
+      <a class="article-more-link" href="/2018/xiangxi/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%9B%BD%E5%86%85/" rel="tag">国内</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+    <article
+  id="post-雅加达出差记"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2017/jakarta/"
+    >雅加达出差记</a> 
+</h2>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2017/jakarta/" class="article-date">
+  <time datetime="2017-12-24T03:05:25.000Z" itemprop="datePublished">2017-12-24</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E6%97%85%E8%A1%8C/">旅行</a>
+  </div>
+   
+    </div>
+      
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>整理手机相册，发现还有一段回忆没整理，于是抽了这段闲暇时间把在 雅加达 的日子记录下来，希望有些经验也能帮到网友。</p>
+<p>年初，因为出差的缘故，有幸去 雅加达 体验了一个多月的风土人情。刚开始我是十分不习惯的，毕竟异国他乡之前都没呆过这么久，而且饮食交通没国内那么方便。好在之前去过 越南 ，知道 东南亚 国家都是这样的经济状况，没过几天也适应了，后来慢慢的发现，自己还是挺享受这种简单的生活。至于历史上的恩怨只是老一辈人的谈资，年轻人还是很友好的。</p> 
+      <a class="article-more-link" href="/2017/jakarta/"
+        >阅读更多...</a
+      >
+       
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <footer class="article-footer">
+       
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E5%8D%97%E4%BA%9A/" rel="tag">东南亚</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%97%85%E8%A1%8C/" rel="tag">旅行</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+    
+</article>
+
+    
+  </article>
+  
+
+  
+  <nav class="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">下一页</a>
+  </nav>
+  
+</section>
+</div>
+
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2015-2022
+        <i class="ri-heart-fill heart_icon"></i> Eric Shen
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>访问人数:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>浏览次数:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="岛"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags/%E6%97%85%E8%A1%8C/">旅行</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" target="_blank" rel="noopener" href="http://shenyu-vip.lofter.com">摄影</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2019/about">关于我</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/player">播放器</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="搜索">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
 </body>
-
 
 </html>
