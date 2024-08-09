@@ -7,7 +7,8 @@
     <meta name="description" content="西南石油大学辰空天文社" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>AASPU</title>
-    <script>
+    <base href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/">
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function() {
             const prefix = "https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/"; // 修改为你需要的公共前缀
 
@@ -38,8 +39,22 @@
                     link.href = prefix + link.href;
                 }
             });
+
+            // 处理 <img> 标签
+        document.querySelectorAll('body img[src]').forEach(img => {
+            if (!img.src.startsWith('http') && !img.src.startsWith('//')) {
+                img.src = prefix + img.src;
+            }
         });
-    </script>
+
+        // 处理 <a> 标签
+        document.querySelectorAll('body a[href]').forEach(link => {
+            if (!link.href.startsWith('http') && !link.href.startsWith('//')) {
+                link.href = prefix + link.href;
+            }
+        });
+        });
+    </script> -->
     <meta name="generator" content="hexo-theme-ayer">
     <link rel="stylesheet" href="/css/common.css">
     <link rel="shortcut icon" href="/img/favico.png" />
