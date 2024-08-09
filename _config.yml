@@ -1,2 +1,2 @@
-url: https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University
-root: /Astronomical-Association-of-Southwest-Petroleum-University
+baseurl: "/Astronomical-Association-of-Southwest-Petroleum-University" # the subpath of your site, e.g. /blog
+
