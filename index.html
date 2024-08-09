@@ -3,17 +3,49 @@
 
 <head>
     <meta charset="utf-8" />
-    <base href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University">
     <meta name="keywords" content="aaspu,天文社，辰空，辰空天文社，西南石油大学" />
     <meta name="description" content="西南石油大学辰空天文社" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <title>AASPU</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const prefix = "https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/"; // 修改为你需要的公共前缀
+
+            // 处理 <a> 标签
+            document.querySelectorAll('a[href]').forEach(link => {
+                if (!link.href.startsWith('http') && !link.href.startsWith('//')) {
+                    link.href = prefix + link.href;
+                }
+            });
+
+            // 处理 <img> 标签
+            document.querySelectorAll('img[src]').forEach(img => {
+                if (!img.src.startsWith('http') && !img.src.startsWith('//')) {
+                    img.src = prefix + img.src;
+                }
+            });
+
+            // 处理 <script> 标签
+            document.querySelectorAll('script[src]').forEach(script => {
+                if (!script.src.startsWith('http') && !script.src.startsWith('//')) {
+                    script.src = prefix + script.src;
+                }
+            });
+
+            // 处理 <link> 标签
+            document.querySelectorAll('link[href]').forEach(link => {
+                if (!link.href.startsWith('http') && !link.href.startsWith('//')) {
+                    link.href = prefix + link.href;
+                }
+            });
+        });
+    </script>
     <meta name="generator" content="hexo-theme-ayer">
-    <link rel="stylesheet" href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/css/common.css">
-    <link rel="shortcut icon" href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/img/favico.png" />
-    <link rel="stylesheet" href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/dist/main.css">
-    <link rel="stylesheet" href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/css/fonts/remixicon.css">
-    <link rel="stylesheet" href="https://52hzmercury.github.io/Astronomical-Association-of-Southwest-Petroleum-University/css/custom.css">
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="shortcut icon" href="/img/favico.png" />
+    <link rel="stylesheet" href="/dist/main.css">
+    <link rel="stylesheet" href="/css/fonts/remixicon.css">
+    <link rel="stylesheet" href="/css/custom.css">
 
     <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
 
